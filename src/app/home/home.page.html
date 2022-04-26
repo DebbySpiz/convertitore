@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: brown; text-decoration:underline;">
+      Convertitore
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid  style="padding: 10%; background: wheat; border: solid;
+  ">
+    <ion-row>
+       <!-- Sinistra-->
+      <ion-col   class=" colonne" > 
+        <div class="ion-text-center" >
+          <ion-label> Temperatura  </ion-label>
+        </div>
+        <ion-row> 
+          <ion-col>
+            <ion-item class="bordi">
+          <ion-label position="floating"> C </ion-label>
+          <ion-input [(ngModel)]="cToF" (change) = "conversione('cToF')"type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="bordi">
+          <ion-label position="floating"> F </ion-label>
+          <ion-input  [(ngModel)]="fToC" (change) = "conversione('fToC')" type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+   </ion-col>
+
+        <!-- Sinistra-->
+        <ion-col  class="colonne" >  
+          <div class="ion-text-center">
+            <ion-label> Distanza  </ion-label>
+          </div>
+          <ion-row> 
+            <ion-col>
+          <ion-item class="bordi">
+            <ion-label position="floating"> KM </ion-label>
+            <ion-input [(ngModel)]="kmToMi" (change) = "conversione('kmToMi')" type="number"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="bordi">
+            <ion-label position="floating"> MI </ion-label>
+            <ion-input  [(ngModel)]="miToKm" (change) = "conversione('miToKm')" type="number"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+     </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
